@@ -49,7 +49,7 @@ const ozelDersPlans: PricingPlan[] = [
     ],
     description: "Perfect for individuals and small projects",
     buttonText: "Hemen Başla",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=Ücretsiz%20deneme%20dersi%20almak%20istiyorum.",
     isPopular: false,
   },
   {
@@ -67,7 +67,7 @@ const ozelDersPlans: PricingPlan[] = [
     ],
     description: "Ideal for growing teams and businesses",
     buttonText: "Paket Seç",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=Özel%20ders%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: true,
   },
   {
@@ -84,7 +84,7 @@ const ozelDersPlans: PricingPlan[] = [
     ],
     description: "For large organizations with specific needs",
     buttonText: "Paket Seç",
-    href: "/contact",
+    href: "https://wa.me/905551839644?text=Özel%20ders%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: false,
   },
 ];
@@ -105,7 +105,7 @@ const kampPlans: PricingPlan[] = [
     ],
     description: "Kısa süreli yoğun hazırlık için ideal",
     buttonText: "Kamp Seç",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=LGS%20Kamp%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: false,
   },
   {
@@ -125,7 +125,7 @@ const kampPlans: PricingPlan[] = [
     ],
     description: "Uzun vadeli hazırlık için en popüler seçenek",
     buttonText: "Kamp Seç",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=LGS%20Kamp%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: true,
   },
   {
@@ -164,7 +164,7 @@ const dereceKocluguPlans: PricingPlan[] = [
     ],
     description: "Derece hedefi olan öğrenciler için temel koçluk",
     buttonText: "Hemen Başlayın",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=YKS%20Koçluk%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: false,
   },
   {
@@ -184,7 +184,7 @@ const dereceKocluguPlans: PricingPlan[] = [
     ],
     description: "Derece hedefi için en kapsamlı koçluk programı",
     buttonText: "Hemen Başlayın",
-    href: "/sign-up",
+    href: "https://wa.me/905551839644?text=YKS%20Koçluk%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: true,
   },
   {
@@ -205,7 +205,7 @@ const dereceKocluguPlans: PricingPlan[] = [
     ],
     description: "En üst düzey derece koçluğu için özel program",
     buttonText: "Hemen Başlayın",
-    href: "/contact",
+    href: "https://wa.me/905551839644?text=YKS%20Koçluk%20paketleriyle%20ilgili%20bilgi%20istiyorum",
     isPopular: false,
   },
 ];
@@ -434,21 +434,41 @@ export function Pricing({
 
               <hr className="w-full my-4" />
 
-              <Link
-                href={plan.href}
-                className={cn(
-                  buttonVariants({
-                    variant: "outline",
-                  }),
-                  "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                  "transform-gpu ring-offset-current transition-all duration-300 ease-out",
-                  plan.isPopular
-                    ? "bg-[#3D3072] text-white hover:ring-2 hover:ring-[#3D3072] hover:ring-offset-1 hover:bg-[#3D3072]/90 hover:text-white"
-                    : "bg-background text-foreground hover:ring-2 hover:ring-[#5A6DA4] hover:ring-offset-1 hover:bg-[#5A6DA4] hover:text-white"
-                )}
-              >
-                {plan.buttonText}
-              </Link>
+              {plan.href.startsWith('http') ? (
+                <a
+                  href={plan.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants({
+                      variant: "outline",
+                    }),
+                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out",
+                    plan.isPopular
+                      ? "bg-[#3D3072] text-white hover:ring-2 hover:ring-[#3D3072] hover:ring-offset-1 hover:bg-[#3D3072]/90 hover:text-white"
+                      : "bg-background text-foreground hover:ring-2 hover:ring-[#5A6DA4] hover:ring-offset-1 hover:bg-[#5A6DA4] hover:text-white"
+                  )}
+                >
+                  {plan.buttonText}
+                </a>
+              ) : (
+                <Link
+                  href={plan.href}
+                  className={cn(
+                    buttonVariants({
+                      variant: "outline",
+                    }),
+                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out",
+                    plan.isPopular
+                      ? "bg-[#3D3072] text-white hover:ring-2 hover:ring-[#3D3072] hover:ring-offset-1 hover:bg-[#3D3072]/90 hover:text-white"
+                      : "bg-background text-foreground hover:ring-2 hover:ring-[#5A6DA4] hover:ring-offset-1 hover:bg-[#5A6DA4] hover:text-white"
+                  )}
+                >
+                  {plan.buttonText}
+                </Link>
+              )}
             </div>
           </motion.div>
         ))}

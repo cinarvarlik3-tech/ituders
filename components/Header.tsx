@@ -42,8 +42,10 @@ export default function Header() {
         {/* Button Container */}
         <nav className="flex gap-5 justify-end">
           {/* Button: Ücretsiz Deneme Dersi */}
-          <Link
-            href="/deneme-dersi"
+          <a
+            href="https://wa.me/905551839644?text=Ücretsiz%20deneme%20dersi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold text-white transition-all duration-200 hover:brightness-90 shadow-lg hover:shadow-xl relative overflow-hidden inline-block"
             style={{ 
               backgroundColor: 'var(--primary-btn)',
@@ -52,7 +54,7 @@ export default function Header() {
           >
             <span className="relative z-10">Ücretsiz Deneme Dersi</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-1000"></div>
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

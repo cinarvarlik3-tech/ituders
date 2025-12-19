@@ -10,7 +10,6 @@
  */
 
 import Carousel from './Carousel'
-import Link from 'next/link'
 
 /**
  * Renders the hero section with a centered container box containing text content
@@ -40,12 +39,14 @@ export default function Hero() {
           <p className="hidden md:block font-medium text-[1.2rem] max-w-[500px] mt-6">
             Derece öğrencileri ve uzman öğretmenlerden özel ders, YKS koçluğu ve LGS kampı alın. İlk ders ücretsiz.
           </p>
-          <Link
-            href="/deneme-dersi"
+          <a
+            href="https://wa.me/905551839644?text=Ücretsiz%20deneme%20dersi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block no-underline mt-10 py-[18px] px-[40px] text-[18px] font-bold bg-[#fafafa] text-[#3D3072] rounded-[12px] border-none transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
           >
             Ücretsiz Deneme Dersi Al
-          </Link>
+          </a>
         </div>
         <div className="bg-[#3D3072] rounded-[12px] w-full md:w-[40%] md:max-w-[36%] h-[55%] md:h-[90%] mt-6 md:mt-0 relative overflow-hidden">
           <Carousel duration={12} pauseOnHover={true} />

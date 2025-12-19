@@ -48,7 +48,13 @@ function PricingCard({
 			<div className="flex items-center gap-3 p-4">
 				<Badge variant="secondary">{titleBadge}</Badge>
 				<div className="ml-auto">
-					<Button variant={buttonClassName ? undefined : "outline"} className={cn("text-lg font-semibold tracking-tighter", buttonClassName)}>{cta}</Button>
+					<a 
+						href="https://wa.me/905551839644?text=LGS%20Kamp%20paketleriyle%20ilgili%20bilgi%20istiyorum"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Button variant={buttonClassName ? undefined : "outline"} className={cn("text-lg font-semibold tracking-tighter", buttonClassName)}>{cta}</Button>
+					</a>
 				</div>
 			</div>
 
@@ -109,7 +115,13 @@ export function BentoPricing() {
 						<SparklesIcon className="me-1 size-3" /> En Çok Önerilen
 					</Badge>
 					<div className="ml-auto">
-						<Button className="text-lg font-semibold tracking-tighter bg-[#3D3072] text-white hover:bg-[#3D3072]/90">Hemen Başlayın</Button>
+						<a 
+							href="https://wa.me/905551839644?text=LGS%20Kamp%20paketleriyle%20ilgili%20bilgi%20istiyorum"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Button className="text-lg font-semibold tracking-tighter bg-[#3D3072] text-white hover:bg-[#3D3072]/90">Hemen Başlayın</Button>
+						</a>
 					</div>
 				</div>
 				<div className="flex flex-col p-4 lg:flex-row">

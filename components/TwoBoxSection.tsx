@@ -31,12 +31,14 @@ export default function TwoBoxSection() {
               >
                 Bize WhatsApp'tan ulaşın
               </a>
-              <Link 
-                href="/deneme-dersi"
+              <a 
+                href="https://wa.me/905551839644?text=Arama%20bekliyorum"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#5A6DA4] text-white py-2.5 px-6 text-sm font-bold rounded-[12px] border-none transition-all duration-200 hover:-translate-y-0.5 cursor-pointer inline-block whitespace-nowrap"
               >
                 Sizi Arayalım
-              </Link>
+              </a>
             </div>
           </div>
         </div>
