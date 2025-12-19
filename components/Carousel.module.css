@@ -1,0 +1,140 @@
+/**
+ * CSS Module for Dual-Column Synchronized Vertical Infinite Carousel
+ * 
+ * Uses CSS custom properties for dynamic animation duration and pause state
+ */
+
+.carouselContainer {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* Mobile: Stack rows vertically */
+@media (max-width: 768px) {
+  .carouselContainer {
+    flex-direction: column;
+  }
+}
+
+.carouselRow {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Mobile: Single row horizontal layout */
+@media (max-width: 768px) {
+  .carouselRow {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.carouselTrack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300%; /* 6 cards total (3 original + 3 clones), each 50% of container = 300% */
+}
+
+/* Mobile: Horizontal track */
+@media (max-width: 768px) {
+  .carouselTrack {
+    flex-direction: row;
+    width: 300%; /* 6 cards total (3 original + 3 clones), each 50% of container = 300% */
+    height: 100%;
+  }
+}
+
+.leftTrack {
+  animation: scrollUp var(--animation-duration, 10s) linear infinite;
+}
+
+.rightTrack {
+  animation: scrollDown var(--animation-duration, 10s) linear infinite;
+  transform: translateY(-50%); /* Start at the cloned set for seamless downward scroll */
+}
+
+/* Mobile: Horizontal animations */
+@media (max-width: 768px) {
+  .leftTrack {
+    animation: scrollLeft var(--animation-duration, 10s) linear infinite;
+    transform: translateX(0);
+  }
+
+  .rightTrack {
+    animation: scrollRight var(--animation-duration, 10s) linear infinite;
+    transform: translateX(-50%); /* Start at the cloned set for seamless rightward scroll */
+  }
+}
+
+.carouselCard {
+  height: 16.666%; /* Each card is 1/6 of track (300% of container) = 50% of container height */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+/* Mobile: Horizontal card sizing */
+@media (max-width: 768px) {
+  .carouselCard {
+    width: 16.666%; /* Each card is 1/6 of track (300% of container) = 50% of container width */
+    height: 100%;
+  }
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Move up by exactly 50% of track (150% of container = 3 cards) */
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%); /* Start at the second set of 3 cards (clones) */
+  }
+  100% {
+    transform: translateY(0); /* Move down to show the first set, seamlessly looping */
+  }
+}
+
+/* Mobile: Horizontal scroll animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by exactly 50% of track (150% of container = 3 cards) */
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%); /* Start at the second set of 3 cards (clones) */
+  }
+  100% {
+    transform: translateX(0); /* Move right to show the first set, seamlessly looping */
+  }
+}
+
+.pauseOnHover:hover .leftTrack,
+.pauseOnHover:hover .rightTrack {
+  animation-play-state: paused;
+}
+
