@@ -21,18 +21,46 @@ interface CarouselProps {
 }
 
 const defaultImages = [
-  'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&fit=crop',
-  'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop',
+  '/images/Alperen.jpeg',
+  '/images/Berkay.jpeg',
+  '/images/Fatih.jpeg',
+  '/images/Mete.jpeg',
+  '/images/Vedat.jpeg',
+  '/images/Yunus.jpeg',
 ]
+
+// Left side images: Berkay, Alperen, Vedat
+const leftImages = [
+  '/images/Berkay.jpeg',
+  '/images/Alperen.jpeg',
+  '/images/Vedat.jpeg',
+]
+
+// Right side images: Mete, Yunus, Fatih
+const rightImages = [
+  '/images/Mete.jpeg',
+  '/images/Yunus.jpeg',
+  '/images/Fatih.jpeg',
+]
+
+// Text content for each image
+const imageTexts: Record<string, string> = {
+  '/images/Vedat.jpeg': 'Vedat Yıldız\nİstanbul Teknik Üniversitesi\nSAY 4151',
+  '/images/Alperen.jpeg': 'Alperen Ağaç\nİstanbul Teknik Üniversitesi\nSAY 1253 / TYT 2153',
+  '/images/Berkay.jpeg': 'Berkay Öztürk\nBoğaziçi Üniversitesi\nSÖZ 62',
+  '/images/Mete.jpeg': 'Mete Işık\nÖzyeğin Üniversitesi\nSÖZ 227',
+  '/images/Yunus.jpeg': 'Yunus Akdoğan\nÖzyeğin Üniversitesi\nEA 545',
+  '/images/Fatih.jpeg': 'Fatih Kara\nÖzyeğin Üniversitesi\nEA 1447',
+}
 
 export default function Carousel({ 
   images = defaultImages, 
-  duration = 10,
-  pauseOnHover = true 
+  duration = 15,
+  pauseOnHover = false 
 }: CarouselProps) {
-  // Clone the images array to create seamless loop (1-2-3-1-2-3)
-  const clonedImages = [...images, ...images]
+  // Clone the images arrays to create seamless loop
+  const leftColumnImages = [...leftImages, ...leftImages]
+  const rightColumnImages = [...rightImages, ...rightImages]
 
   return (
     <div 
@@ -44,14 +72,19 @@ export default function Carousel({
       {/* Left Row - Scrolls Upward */}
       <div className={styles.carouselRow}>
         <div className={`${styles.carouselTrack} ${styles.leftTrack}`}>
-          {clonedImages.map((image, index) => (
+          {leftColumnImages.map((image, index) => (
             <div key={`left-${index}`} className={styles.carouselCard}>
               <img 
                 src={image} 
-                alt={`Carousel image ${(index % images.length) + 1}`}
+                alt={`Carousel image ${(index % leftImages.length) + 1}`}
                 className={styles.carouselImage}
                 loading="lazy"
               />
+              <div className={styles.cardText}>
+                {imageTexts[image]?.split('\n').map((line, i) => (
+                  <div key={i}>{line}</div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -60,14 +93,19 @@ export default function Carousel({
       {/* Right Row - Scrolls Downward */}
       <div className={styles.carouselRow}>
         <div className={`${styles.carouselTrack} ${styles.rightTrack}`}>
-          {clonedImages.map((image, index) => (
+          {rightColumnImages.map((image, index) => (
             <div key={`right-${index}`} className={styles.carouselCard}>
               <img 
                 src={image} 
-                alt={`Carousel image ${(index % images.length) + 1}`}
+                alt={`Carousel image ${(index % rightImages.length) + 1}`}
                 className={styles.carouselImage}
                 loading="lazy"
               />
+              <div className={styles.cardText}>
+                {imageTexts[image]?.split('\n').map((line, i) => (
+                  <div key={i}>{line}</div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

@@ -398,7 +398,6 @@ export function Pricing({
                           minimumFractionDigits: 0,
                           maximumFractionDigits: 0,
                         }}
-                        formatter={(value) => `${Math.round(value)}`}
                         transformTiming={{
                           duration: 500,
                           easing: "ease-out",

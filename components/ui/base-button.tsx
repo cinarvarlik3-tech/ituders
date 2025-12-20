@@ -394,7 +394,7 @@ function Button({
         underline,
         className,
       }),
-      asChild && props.disabled && 'pointer-events-none opacity-50',
+      asChild && (props as React.ButtonHTMLAttributes<HTMLButtonElement>).disabled && 'pointer-events-none opacity-50',
     ),
     ...(selected && { 'data-state': 'open' as const }),
   };

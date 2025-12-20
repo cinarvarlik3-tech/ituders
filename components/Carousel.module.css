@@ -53,6 +53,7 @@
 
 .leftTrack {
   animation: scrollUp var(--animation-duration, 10s) linear infinite;
+  transform: translateY(0);
 }
 
 .rightTrack {
@@ -79,6 +80,7 @@
   box-sizing: border-box;
   padding: 8px;
   flex-shrink: 0;
+  position: relative;
 }
 
 /* Mobile: Horizontal card sizing */
@@ -94,6 +96,30 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carouselCard:hover .carouselImage {
+  opacity: 0.5;
+  filter: brightness(0.7);
+}
+
+.cardText {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carouselCard:hover .cardText {
+  opacity: 1;
 }
 
 @keyframes scrollUp {

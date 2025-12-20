@@ -3,10 +3,10 @@ import * as React from 'react';
 /**
  * Merges multiple props objects, with later props taking precedence
  */
-export function mergeProps<T extends Record<string, unknown>>(
-  ...props: (T | undefined)[]
+export function mergeProps<T extends Record<string, any>>(
+  ...props: (Record<string, any> | undefined)[]
 ): T {
-  const merged = {} as T;
+  const merged = {} as Record<string, any>;
   
   for (const prop of props) {
     if (!prop) continue;
@@ -18,13 +18,13 @@ export function mergeProps<T extends Record<string, unknown>>(
           merged[key] 
             ? `${merged[key]} ${prop[key]}` 
             : prop[key]
-        ) as T[Extract<keyof T, string>];
+        );
       } else if (key === 'style' && typeof prop[key] === 'object' && prop[key] !== null) {
         // Special handling for style - merge objects
         merged[key] = {
           ...(merged[key] as object || {}),
           ...(prop[key] as object),
-        } as T[Extract<keyof T, string>];
+        };
       } else {
         // For other props, later values override earlier ones
         merged[key] = prop[key];
@@ -32,7 +32,7 @@ export function mergeProps<T extends Record<string, unknown>>(
     }
   }
   
-  return merged;
+  return merged as T;
 }
 
 /**
@@ -56,7 +56,7 @@ export namespace useRender {
     }
 
     if (React.isValidElement(renderProp)) {
-      return React.cloneElement(renderProp, mergeProps(renderProp.props, props));
+      return React.cloneElement(renderProp, mergeProps(renderProp.props as Record<string, any>, props));
     }
 
     if (typeof renderProp === 'function') {

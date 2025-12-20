@@ -49,7 +49,7 @@ export default function Hero() {
           </a>
         </div>
         <div className="bg-[#3D3072] rounded-[12px] w-full md:w-[40%] md:max-w-[36%] h-[55%] md:h-[90%] mt-6 md:mt-0 relative overflow-hidden">
-          <Carousel duration={12} pauseOnHover={true} />
+          <Carousel duration={18} pauseOnHover={false} />
         </div>
         {/* Downward pointing arrow */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
