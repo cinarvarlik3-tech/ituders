@@ -89,6 +89,7 @@ export default function TwoBoxSection() {
                     0 555 183 96 44
                   </a>
                   <a href="https://wa.me/905551234567" className="text-white text-base font-medium hover:underline">WhatsApp Destek</a>
+                  <Link href="/gizlilik-politikasi" className="text-white text-base font-medium hover:underline">Gizlilik Politikası</Link>
                 </div>
               </div>
 
