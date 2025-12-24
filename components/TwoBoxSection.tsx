@@ -90,6 +90,7 @@ export default function TwoBoxSection() {
                   </a>
                   <a href="https://wa.me/905551234567" className="text-white text-base font-medium hover:underline">WhatsApp Destek</a>
                   <Link href="/gizlilik-politikasi" className="text-white text-base font-medium hover:underline">Gizlilik Politikası</Link>
+                  <Link href="/kvkk-aydinlatma-metni" className="text-white text-base font-medium hover:underline">KVKK Aydınlatma Metni</Link>
                 </div>
               </div>
 

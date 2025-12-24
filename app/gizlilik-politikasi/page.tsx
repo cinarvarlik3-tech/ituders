@@ -6,146 +6,252 @@ export default function GizlilikPolitikasi() {
   return (
     <main className="min-h-screen bg-[#fafafa] py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-[#3D3072] mb-8 text-center">
-          Gizlilik Politikası
+        <h1 className="text-4xl font-bold text-[#3D3072] mb-4 text-center">
+          Gizlilik ve Kişisel Verilerin Korunması Politikası
         </h1>
+        <p className="text-xl text-gray-600 mb-8 text-center">
+          İTÜDers – YKS Hazırlık
+        </p>
         
         <div className="bg-white rounded-[30px] p-8 md:p-12 shadow-lg">
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 leading-relaxed mb-6">
-              İşbu Gizlilik Politikası, İTÜDers ("Şirket") tarafından yürütülen YKS hazırlık eğitim hizmetleri kapsamında, veli iletişim bilgilerinin işlenmesine ilişkin usul ve esasları açıklamak amacıyla hazırlanmıştır.
+              İTÜDers olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuata uygun şekilde kişisel verilerin korunmasına önem veriyoruz. Bu politika, tarafımızla paylaştığınız telefon numaralarının hangi amaçlarla işlendiğini ve haklarınızı açıklamaktadır.
             </p>
 
             <div className="space-y-6">
               <section>
                 <h2 className="text-2xl font-bold text-[#3D3072] mb-4">1. Veri Sorumlusu</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Bu politika kapsamında veri sorumlusu:
+                </p>
                 <p className="text-gray-700 leading-relaxed">
-                  6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz veri sorumlusu sıfatıyla İTÜDers tarafından işlenmektedir.
+                  İTÜDers – YKS Hazırlık
+                </p>
+                <p className="text-gray-600 text-sm italic mt-2">
+                  (Resmi şirket unvanınızı ve iletişim bilgilerinizi ekleyin — eklememizi istersen hazırlayabilirim.)
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">2. İşlenen Kişisel Veriler</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">2. Toplanan Kişisel Veri Türü</h2>
                 <p className="text-gray-700 leading-relaxed mb-2">
-                  İTÜDers tarafından yalnızca aşağıdaki kişisel veriler işlenmektedir:
+                  Tarafımızca yalnızca aşağıdaki veri işlenmektedir:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Veliye ait telefon numarası</li>
-                  <li>(Varsa) Veli adı–soyadı</li>
+                  <li>Telefon numarası</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  Bunun dışında herhangi bir özel nitelikli kişisel veri toplanmamaktadır.
+                  Başka hiçbir kişisel veri talep etmeyiz veya işlemiş sayılmayız.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">3. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">3. Verilerin Toplanma Yöntemi</h2>
                 <p className="text-gray-700 leading-relaxed mb-2">
-                  Kişisel verileriniz;
+                  Telefon numaranız aşağıdaki kanallardan açık rızanızla elde edilir:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>İnternet sitesi üzerindeki formlar,</li>
-                  <li>WhatsApp / telefon iletişimi,</li>
-                  <li>Yazılı veya dijital onay kanalları</li>
+                  <li>Reklam/form/başvuru kanalları</li>
+                  <li>Web sitesi/formlar</li>
+                  <li>WhatsApp veya telefon görüşmesi</li>
+                  <li>Bilgilendirme talebi ile yaptığınız başvurular</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  aracılığıyla, açık rızanız alınmak suretiyle toplanmaktadır.
-                </p>
-                <p className="text-gray-700 leading-relaxed mt-2">
-                  <strong>Hukuki sebep:</strong> KVKK m.5/1 uyarınca açık rıza
+                  Veri paylaşımı tamamen gönüllüdür.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">4. Kişisel Verilerin İşlenme Amacı</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">4. Verilerin İşlenme Amaçları</h2>
                 <p className="text-gray-700 leading-relaxed mb-2">
-                  Toplanan telefon numaraları yalnızca aşağıdaki amaçlarla işlenmektedir:
+                  Telefon numaranız yalnızca şu amaçlarla işlenir:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>YKS hazırlık sınıfları hakkında bilgi vermek,</li>
-                  <li>Eğitim programları, ders içerikleri ve kayıt süreçleri hakkında veliye telefonla bilgilendirme yapmak,</li>
-                  <li>Veli taleplerine geri dönüş sağlamak.</li>
+                  <li>YKS hazırlık programlarımız hakkında bilgilendirme yapmak</li>
+                  <li>Talep ettiğiniz danışmanlık hizmetlerini sunmak</li>
+                  <li>Size dönüş sağlamak</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  Kişisel veriler pazarlama, reklam veya üçüncü taraf tanıtımı amacıyla kullanılmaz.
+                  Başka hiçbir amaçla kullanılmaz.
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">5. Kişisel Verilerin Aktarılması</h2>
-                <p className="text-gray-700 leading-relaxed mb-2">
-                  Toplanan kişisel veriler:
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Üçüncü kişilerle paylaşılmaz,</li>
-                  <li>Yurt içine veya yurt dışına aktarılmaz.</li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed mt-2">
-                  Yalnızca iletişim faaliyetlerinin yürütülmesi amacıyla, gerekli olduğu ölçüde yetkili İTÜDers çalışanları tarafından erişilebilir.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">6. Kişisel Verilerin Saklama Süresi</h2>
-                <p className="text-gray-700 leading-relaxed mb-2">
-                  Kişisel veriler;
-                </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Bilgilendirme amacının ortadan kalkması,</li>
-                  <li>Velinin talebi,</li>
-                  <li>Açık rızanın geri çekilmesi</li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed mt-2">
-                  hallerinden hangisi önce gerçekleşirse, makul süre içinde silinir, yok edilir veya anonim hale getirilir.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">7. Veri Güvenliği</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  İTÜDers, kişisel verilerin hukuka aykırı olarak işlenmesini veya erişilmesini önlemek amacıyla gerekli idari ve teknik tedbirleri almaktadır.
+                  Profil çıkarma, yeniden hedefleme, üçüncü taraf reklamcılığı yapılmaz.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">8. KVKK Kapsamındaki Haklarınız</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">5. Hukuki Dayanak</h2>
                 <p className="text-gray-700 leading-relaxed mb-2">
-                  KVKK'nın 11. maddesi uyarınca veri sahibi olarak;
+                  Kişisel verileriniz:
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
-                  <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
-                  <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
-                  <li>Amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
-                  <li>Yanlış veya eksik işlenmişse düzeltilmesini isteme,</li>
-                  <li>KVKK'ya uygun olarak silinmesini veya yok edilmesini talep etme,</li>
-                  <li>Açık rızanızı geri çekme</li>
+                  <li>KVKK m.5/1 kapsamında açık rızanız ile</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  haklarına sahipsiniz.
+                  işlenmektedir.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Rızanız yoksa veri işlenmez.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">6. Açık Rızanın Geri Çekilmesi (İletişimi Durdurma)</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Bizden iletişim almak istemediğinizde:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>"İletişimi durdurmak istiyorum" yazmanız</li>
+                  <li>veya</li>
+                  <li>telefon/WhatsApp üzerinden bildirmeniz</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  yeterlidir.
                 </p>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  Bu haklarınıza ilişkin taleplerinizi İTÜDers ile iletişime geçerek iletebilirsiniz.
+                  Talebiniz alındığı anda iletişim durdurulur ve kaydınız silinir.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">9. İletişim</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">7. Verilerin Aktarılması</h2>
                 <p className="text-gray-700 leading-relaxed mb-2">
-                  KVKK kapsamındaki talepleriniz ve gizlilik politikasına ilişkin sorularınız için bizimle iletişime geçebilirsiniz:
+                  Telefon numaranız:
                 </p>
-                <div className="text-gray-700 space-y-1 ml-4">
-                  <p><strong>İTÜDers</strong></p>
-                  <p>E-posta: <a href="mailto:info@ituders.com" className="text-[#3D3072] hover:underline">info@ituders.com</a></p>
-                  <p>Telefon: —</p>
-                </div>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Satılmaz</li>
+                  <li>Kiralanmaz</li>
+                  <li>Yetkisiz üçüncü kişilerle paylaşılmaz</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Yalnızca;
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Kanuni yükümlülük</li>
+                  <li>Yetkili kamu kurum talebi</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  halinde, mevzuata uygun şekilde paylaşılabilir.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Gerekirse teknik destek sağlayıcı firmalarla veri işleyen sözleşmesi kapsamında sınırlı paylaşım yapılabilir.
+                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">10. Politika Güncellemeleri</h2>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">8. Yurt Dışına Aktarım</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  İşbu Gizlilik Politikası, mevzuat değişiklikleri veya uygulamalardaki güncellemeler doğrultusunda revize edilebilir. Güncel metin her zaman ilgili platformlarda yayımlanır.
+                  Telefon numaraları yurt dışına aktarılmaz.
                 </p>
               </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">9. Saklama Süresi</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Verileriniz:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Sadece iletişim süresince saklanır</li>
+                  <li>İletişimden çıkmanız halinde derhal silinir</li>
+                  <li>En fazla gerekli süre boyunca saklanır, sonra anonimleştirilir veya imha edilir.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">10. Veri Güvenliği Önlemleri</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Verileriniz:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Erişim yetkisi kısıtlanmış sistemlerde</li>
+                  <li>Yetkisiz erişime karşı korunarak</li>
+                  <li>Güvenli ortamlarda</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  saklanır.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Gereksiz veri tutulmaz.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">11. Meta Reklam Politikalarına Uyum</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  İTÜDers:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Verileri yalnızca izinli iletişim amacıyla kullanır</li>
+                  <li>Meta reklam ve topluluk kurallarına uyar</li>
+                  <li>Kullanıcı rızasını ön koşul kabul eder</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Veriler Meta ile paylaşılmaz.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">12. 18 Yaş Altı Kullanıcılar</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Velisinin açık izni olmadan veri toplamayı hedeflemeyiz.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Yanlışlıkla alınması halinde silme talebi üzerine kayıt kaldırılır.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">13. KVKK Kapsamındaki Haklarınız</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  KVKK Madde 11 gereği aşağıdaki haklara sahipsiniz:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>Kişisel verinizin işlenip işlenmediğini öğrenme</li>
+                  <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+                  <li>İşlenme amacını öğrenme</li>
+                  <li>Yanlış işlenmişse düzeltilmesini isteme</li>
+                  <li>Silinmesini veya yok edilmesini talep etme</li>
+                  <li>İşlemenin hukuka aykırı olması halinde zarar tazmini talep etme</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Bu haklar için bize başvurabilirsiniz.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">14. Başvuru Yöntemi</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Başvurularınızı:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                  <li>E-posta ile</li>
+                  <li>Yazılı olarak</li>
+                </ul>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  tarafımıza iletebilirsiniz.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Başvurular en geç 30 gün içinde yanıtlanır.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-[#3D3072] mb-4">15. Politika Güncellemeleri</h2>
+                <p className="text-gray-700 leading-relaxed mb-2">
+                  Bu politika gerektiğinde güncellenebilir.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Güncel sürüm her zaman talep edilebilir.
+                </p>
+              </section>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-gray-700 font-semibold mb-2">İTÜDers – YKS Hazırlık</p>
+              <p className="text-gray-700">
+                E-posta: <a href="mailto:info@ituders.com" className="text-[#3D3072] hover:underline">info@ituders.com</a>
+              </p>
             </div>
           </div>
         </div>
@@ -153,4 +259,3 @@ export default function GizlilikPolitikasi() {
     </main>
   )
 }
-
